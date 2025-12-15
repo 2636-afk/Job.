@@ -1,0 +1,29 @@
+body {
+  font-family: system-ui;
+  background:#4A4545;
+  color:;# BA1D16;
+  text-align: center;
+}>
+img
+border-radius:10%;
+width:50%
+]
+img
+{border-radius:5%;
+  width:100%}
+.row{
+  display:flex;
+  padding:5px;
+  }
+
+h1{
+  test-align:center;
+  font-size:60px;
+  color:#E6E6FA	
+    }
+p{
+  test-align:center;}
+.column imag{
+  margin-top:5px
+    }
+    
