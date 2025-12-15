@@ -1,0 +1,183 @@
+<h1>mi extra navideño computacion  </h1>
+<h2>job alejandro cortes 4 A
+
+  <title></title>
+  <style>
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    /* Galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #888;
+    }
+
+    /* Lightbox styles */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    #lightbox.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+
+    #lightbox .close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+</h1>
+    <p></p>
+  </header>
+
+  <main class="gallery">
+    <img src="https://st2.depositphotos.com/2627021/43325/i/450/depositphotos_433255036-stock-photo-snowy-christmas-tree-red-balls.jpg" alt="navidad" /> 
+
+    <img src="https://www.shutterstock.com/image-vector/winter-landscape-background-vector-illustration-260nw-2380924997.jpg" />
+    <img src="https://i.pinimg.com/474x/b8/87/44/b8874411668b24d1d3c313c6714ffc77.jpg" alt="Jugador del Real Madrid" />
+    <img src="https://img.pikbest.com/wp/202345/landscape-snowy-with-christmas-tree-and-moon_9580882.jpg!w700wp" alt="Imagen del California Times" />
+    <img src="https://www.softzone.es/app/uploads-softzone.es/2020/12/muneco-navidad-1.jpg" alt="Estadio Santiago Bernabéu, Madrid" />
+    <img src="https://e1.pxfuel.com/desktop-wallpaper/596/288/desktop-wallpaper-christmas-winter-christmas-scenery-thumbnail.jpg" alt="Kylian Mbappé" />
+    <img src="https://topnavidad.com/wp-content/uploads/Paisajes-de-Navidad-hermosos.jpeg" alt="Fernanda Russo y Julián Gutiérrez ganaron el bronce en la Copa del Mundo de Tiro" />
+    <img src="https://www.shutterstock.com/image-vector/winter-landscape-background-vector-illustration-260nw-2380924997.jpg" alt="Imagen de Reddit" />
+    <img src="
+              https://media.cnn.com/api/v1/images/stellar/prod/131119121910-winter-scene-tallin.jpg?q=w_4256,h_2848,x_0,y_0,c_fill/h_447" alt="Imagen de Prensa Ibérica" />
+        <img src="https://media.istockphoto.com/id/1646149698/es/vector/fondo-invernal-pueblo-navide%C3%B1o-borde-sin-costuras.jpg?s=612x612&w=0&k=20&c=M9O_HyX-Ua95e31X607DReOAH87045aHJcb7oz0nDcU="/>
+             <img src="https://e1.pxfuel.com/desktop-wallpaper/596/288/desktop-wallpaper-christmas-winter-christmas-scenery-thumbnail.jpg"/>
+    <img src="https://e1.pxfuel.com/desktop-wallpaper/365/733/desktop-wallpaper-anime-landscape-snowman-cityscape-night-scenic-houses-anime-christmas-scenery-thumbnail.jpg"/>
+     <img src="https://static.vecteezy.com/system/resources/thumbnails/013/116/688/small/winter-christmas-background-free-vector.jpg"/>
+     <img src="https://www.shutterstock.com/image-vector/illustration-winter-landscape-night-background-260nw-2549398089.jpg"/>
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/069/586/670/small/christmas-tree-under-starry-sky-winter-landscape-festive-lights-snow-covered-field-tranquil-night-holiday-season-photo.jpg"/>
+    
+             
+             
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Imagen ampliada" />
+  </div>
+
+  <footer>
+    <p>© 2025 Tu Nombre | Galería personal</p>
+  </footer>
+
+  <script>
+    // Seleccionamos elementos
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.close');
+    const galleryImages = document.querySelectorAll('.gallery img');
+
+    // Abrir lightbox al hacer clic en imagen
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    // Cerrar lightbox al hacer clic en la "x"
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImage.src = '';
+    });
+
+    // Cerrar lightbox al hacer clic fuera de la imagen
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightboxImage.src = '';
+      }
+    });
+
+    // Cerrar lightbox con tecla ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        lightboxImage.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
